@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: fontMedium;
+}
+@font-face {
+    font-family: fontMedium;
+    src: url(./font/static/PlusJakartaSans-Medium.ttf);
+}
+.container {
+    padding-top: 37px;
+    padding-left: 45px;
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 100vh;
+}
+.header {
+    width: 100%;
+    height: 100%;
+}
+.task--icon {
+    display: flex;
+}
+.task--icon p {
+    margin-top: 5px;
+}
+.task--icon img {
+    margin-left: 4px;
+    margin-top: 5px;
+    width: 23px;
+    height: 23px;
+}
+.task--img {
+    height: 58px;
+    width: 171px;
+}
+.new--task {
+    color: #5A5C63;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    align-items: center;
+}
+.new__task {
+    display: flex;
+}
+.new__task i {
+    margin-top: 3px;
+    margin-right: 10px;
+}
+.todos {
+    margin-top: 20px;
+}
+.todos .todos--container {
+    padding: 0 30px;
+    margin-left: -50px;
+}
+.todos .todos--container .todos--component {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.todos .todos--container .todos--component .todos--item {
+    flex-basis: 33.333%;
+    padding: 0 23px;
+    position: relative;
+}
+.todos .todos--container .todos--component .todos--item .todos--info {
+    padding-bottom: 16px;
+    border-bottom: 2px solid #00a6da;
+}
+.todos .todos--container .todos--component .todos--item .todos--info .todos--title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 34px;
+    background-color: #00a6da;
+    padding: 0 9px;
+    color: white;
+    font-weight: 700;
+    border-radius: 4px;
+}
+.todos .todos--container .todos--component .todos--item:nth-child(2) .todos--info{
+    border-bottom: 2px solid #E2D071;
+}
+.todos .todos--container .todos--component .todos--item:nth-child(2) .todos--info .todos--title{
+    background-color: #E2D071;
+}
+.todos .todos--container .todos--component .todos--item:nth-child(3) .todos--info{
+    border-bottom: 2px solid #3BC057;
+}
+.todos .todos--container .todos--component .todos--item:nth-child(3) .todos--info .todos--title{
+    background-color: #3BC057;
+}
+.todos .todos--container .todos--item__component {
+    position: absolute;
+    width: 90%;
+    height: 216px;
+    top: 70px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+.todos .todos--container .todos--item__component:nth-child(2){
+    top: 306px;
+}
+.todos .todos--container .todos--item__component .todos--component__header {
+    display: flex;
+    justify-content: space-between;
+}
+.todos .todos--container .todos--item__component .todos--component__header a {
+    color: #4D8EFF;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+}
+.todos .todos--container .todos--item__component .todos--component__header .todos--component__icon i{
+    margin-left: 7.5px;
+    color: #333333;
+}
+.todos .todos--container .todos--item__component .todos--component__title{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #393939;
+    margin-right: 65px;
+}
+.todos .todos--container .todos--item__component .todos--component__line {
+    width: 250px;
+    border: 1px solid #DBDBDB;
+    margin-top: 20px;
+}
+.todos .todos--container .todos--item__component h6 {
+    color: #5A5C63;
+    margin-top: 20px;
+}
+.todos .todos--container .todos--item__component h6 .todos--component__footer {
+    display: flex;
+}
+.todos .todos--container .todos--item__component h6 .todos--component__footer i {
+    margin-right: 5px;
+    margin-top: 2.5px;
+}
