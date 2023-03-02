@@ -18,9 +18,9 @@
                         <p>Let's get shit done!</p>
                         <img src="./image/hiImage.png" alt="">
                     </div>
-                    <div class="new__task">
-                        <i class="fa-solid fa-plus"></i>
-                        <p>New Task</p>
+                    <div class="new-task">
+                            <i class="fa-solid fa-plus"></i>
+                            <p>New Task</p>
                     </div>
                 </div>
             </div>
@@ -28,55 +28,97 @@
         <div class="todos">
             <div class="todos--container">
                 <div class="todos--component">
-                    <div class="todos--item">
+                    <div class="todos--item" id="todo">
                         <div class="todos--info">
                             <div class="todos--title">
                                 <div class="text">Todo</div>
                                 <div class="count">0</div>
                             </div>
                         </div>
-                        <div class="todos--item__component">
-                            <div class="todos--component__header">
-                                <a href="">Marketing</a>
-                                <div class="todos--component__icon">
-                                <i class="fa-solid fa-pen"></i>
-                                <i class="fa-solid fa-trash"></i>
+                        <div class="todos--item__folder" id="task">
+                            <!-- <div class="todos--item__component" >
+                                <div class="todos--component__header">
+                                    <a href="">Marketing</a>
+                                    <div class="todos--component__icon">
+                                    <i onclick="editTask()" class="fa-solid fa-pen"></i>
+                                    <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
+                                    </div>
+                                </div>
+                                <div class="todos--component__title">
+                                <b>
+                                    Write SEO article for new product
+                                </b>
+                                </div>
+                                <div class="todos--component__line"></div>
+                                <h6>This is an existential moment for effective altruism and the rationalist community writ-large.</p>
+                                <div class="todos--component__footer">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <p>June 30,2022</p>
                                 </div>
                             </div>
-                            <div class="todos--component__title">
-                            <b>
-                                Write SEO article for new product
-                            </b>
-                            </div>
-                            <div class="todos--component__line"></div>
-                            <h6>This is an existential moment for effective altruism and the rationalist community writ-large.</p>
-                            <div class="todos--component__footer">
-                                <i class="fa-solid fa-clock"></i>
-                                <p>June 30,2022</p>
-                            </div>
-                        </div>
-                        <div class="todos--item__component">
-                            <div class="todos--component__header">
-                                <a href="">Marketing</a>
-                                <div class="todos--component__icon">
-                                <i class="fa-solid fa-pen"></i>
-                                <i class="fa-solid fa-trash"></i>
+                            <div class="todos--item__component" >
+                                <div class="todos--component__header">
+                                    <a href="">Marketing</a>
+                                    <div class="todos--component__icon">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
+                                    </div>
+                                </div>
+                                <div class="todos--component__title">
+                                <b>
+                                    Write SEO article for new product
+                                </b>
+                                </div>
+                                <div class="todos--component__line"></div>
+                                <h6>This is an existential moment for effective altruism and the rationalist community writ-large.</p>
+                                <div class="todos--component__footer">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <p>June 30,2022</p>
                                 </div>
                             </div>
-                            <div class="todos--component__title">
-                            <b>
-                                Write SEO article for new product
-                            </b>
+                            <div class="todos--item__component" >
+                                <div class="todos--component__header">
+                                    <a href="">Marketing</a>
+                                    <div class="todos--component__icon">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
+                                    </div>
+                                </div>
+                                <div class="todos--component__title">
+                                <b>
+                                    Write SEO article for new product
+                                </b>
+                                </div>
+                                <div class="todos--component__line"></div>
+                                <h6>This is an existential moment for effective altruism and the rationalist community writ-large.</p>
+                                <div class="todos--component__footer">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <p>June 30,2022</p>
+                                </div>
                             </div>
-                            <div class="todos--component__line"></div>
-                            <h6>This is an existential moment for effective altruism and the rationalist community writ-large.</p>
-                            <div class="todos--component__footer">
-                                <i class="fa-solid fa-clock"></i>
-                                <p>June 30,2022</p>
-                            </div>
+                            <div class="todos--item__component" >
+                                <div class="todos--component__header">
+                                    <a href="">Marketing</a>
+                                    <div class="todos--component__icon">
+                                    <i class="fa-solid fa-pen"></i>
+                                    <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
+                                    </div>
+                                </div>
+                                <div class="todos--component__title">
+                                <b>
+                                    Write SEO article for new product
+                                </b>
+                                </div>
+                                <div class="todos--component__line"></div>
+                                <h6>This is an existential moment for effective altruism and the rationalist community writ-large.</p>
+                                <div class="todos--component__footer">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <p>June 30,2022</p>
+                                </div>
+                            </div> -->
                         </div>
                     </div>
-                    <div class="todos--item">
+                    <div class="todos--item" id="doing">
                         <div class="todos--info">
                             <div class="todos--title">
                                 <div class="text">Doing</div>
@@ -84,7 +126,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="todos--item">
+                    <div class="todos--item" id="finished">
                         <div class="todos--info">
                             <div class="todos--title">
                                 <div class="text">Finished</div>
@@ -96,7 +138,7 @@
                                 <a href="">Marketing</a>
                                 <div class="todos--component__icon">
                                 <i class="fa-solid fa-pen"></i>
-                                <i class="fa-solid fa-trash"></i>
+                                <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
                                 </div>
                             </div>
                             <div class="todos--component__title">
@@ -116,7 +158,7 @@
                                 <a href="">Marketing</a>
                                 <div class="todos--component__icon">
                                 <i class="fa-solid fa-pen"></i>
-                                <i class="fa-solid fa-trash"></i>
+                                <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
                                 </div>
                             </div>
                             <div class="todos--component__title">
@@ -135,6 +177,72 @@
                 </div>
             </div>
         </div>
+        <div class="cover-layer"></div>
+        <div class="task-form" id="form">
+            <h1 class="title">Add new todo</h1>
+            <form action="">
+                <div class="form-group">
+                    <input
+                        id="input-element"
+                        type="text"
+                        placeholder="Category Etc : Marketing"
+                        name="category"
+                    />
+                </div>
+                <div class="form-group">
+                    <input
+                        id="input-element2"
+                        type="text"
+                        placeholder="Title"
+                        name="title"
+                    />
+                </div>
+                <div class="form-group">
+                    <textarea
+                        id="input-element3"
+                        name="content"
+                        id=""
+                        cols="30"
+                        rows="10"
+                        placeholder="Content"
+                    ></textarea>
+                </div>
+                <div class="status">
+                    <div class="status-item">
+                        <input
+                            type="radio"
+                            id="Todo"
+                            name="status"
+                            value="TODO_TYPE"
+                        />
+                         <label for="Todo">Todo</label><br />
+                    </div>
+                    <div class="status-item">
+                        <input
+                            type="radio"
+                            id="Doing"
+                            name="status"
+                            value="TODO_DOING_TYPE"
+                        />
+                         <label for="Doing">Doing</label><br />
+                    </div>
+                    <div class="status-item">
+                        <input
+                            type="radio"
+                            id="Finished"
+                            name="status"
+                            value="TODO_FINISHED_TYPE"
+                        />
+                         <label for="Finished">Finished</label><br />
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit" data-bs-dismiss="modal" id="addsudmit">Submit</button>
+            </form>
+            <div class="icon-close">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
     </div>
 </body>
+<script src="./script.js"></script>
 </html>
