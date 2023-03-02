@@ -13,6 +13,7 @@ const countData = document.querySelector(".count")
 const todo = document.getElementById("todo")
 const doing = document.getElementById("doing")
 const finished = document.getElementById("finished")
+const btnSubmitForm = document.querySelector(".btn-submit")
 
 
 const getCurrentDate = () => {
@@ -56,36 +57,46 @@ let formValidation = () => {
     }
 
 };
-let data = {};
+let data = [];
 
 let acceptData = () => {
-    data["category"] = validate1.value;
-    data["title"] = validate2.value;
-    data["content"] = validate3.value;
-    data["time"] = getCurrentDate();
-    data["status"] = '';
+    data.push({
+        category: validate1.value,
+        title: validate2.value,
+        content: validate3.value,
+        time: getCurrentDate(),
+        status: '',
+    });
+
+    localStorage.setItem("data", JSON.stringify(data))
+
+    console.log(data)
     createTasks()
 }
 
 let createTasks = () => {
-    task.innerHTML += `
-    <div class="todos--item__component" >
-        <div class="todos--component__header">
-            <a href="">${data.category}</a>
-            <div class="todos--component__icon">
-            <i onclick="editTask(this)" class="fa-solid fa-pen"></i>
-            <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
-            </div>
-        </div>
-        <div class="todos--component__title">${data.title}</div>
-        <div class="todos--component__line"></div>
-        <h6>${data.content}</h6>
-        <div class="todos--component__footer">
-            <i class="fa-solid fa-clock"></i>
-            <p>${data.time}</p>
-        </div>
-        </div>
-    `
+    task.innerHTML = "";
+    data.map((x, y) => {
+        return (
+            task.innerHTML += `
+            <div class="todos--item__component" id=${y} >
+                <div class="todos--component__header">
+                    <a href="">${x.category}</a>
+                    <div class="todos--component__icon">
+                    <i onclick="editTask(this)" class="fa-solid fa-pen"></i>
+                    <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
+                    </div>
+                </div>
+                <div class="todos--component__title">${x.title}</div>
+                <div class="todos--component__line"></div>
+                <h6>${x.content}</h6>
+                <div class="todos--component__footer">
+                    <i class="fa-solid fa-clock"></i>
+                    <p>${x.time}</p>
+                </div>
+                </div>
+            `);
+    })
 
     resetForm()
 };
@@ -137,18 +148,19 @@ const TODO_FINISHED_TYPE = 'TODO_FINISHED_TYPE'
 
 
 let deleteTask = (e) => {
-    e.parentElement.parentElement.parentElement.remove()
+    e.parentElement.parentElement.parentElement.remove();
+    data.splice(e.parentElement.parentElement.parentElement.id, 1);
+    localStorage.setItem("data", JSON.stringify(data))
 }
 
 
 let editTask = (e) => {
     let selectedTask = e.parentElement.parentElement.parentElement;
     let selectedTask1 = e.parentElement.parentElement;
-    let selectedTask2 = e.parentElement.parentElement.parentElement.parentElement;
     displayForm(true)
     function hehe() {
         status1.style.display = "flex"
-        isEdit = true
+        // isEdit = true
         title.innerHTML = "Edit to do"
     }
 
@@ -156,7 +168,7 @@ let editTask = (e) => {
     validate2.value = selectedTask.children[1].innerHTML;
     validate3.value = selectedTask.children[3].innerHTML;
     hehe()
-    selectedTask.remove()
+    deleteTask(e);
 }
 
 let resetForm = () => {
@@ -169,7 +181,7 @@ const displayForm = (status) => {
     formTodoElement.style.display = status ? 'block' : 'none'
     coverLayerElement.style.display = status ? 'block' : 'none'
     status1.style.display = "none"
-    title.innerHTML = "Add new todo"
+    // title.innerHTML = "Add new todo"
 }
 
 btnOpenFormElement.addEventListener('click', () => {
@@ -178,12 +190,14 @@ btnOpenFormElement.addEventListener('click', () => {
 
 iconClose.addEventListener('click', () => {
     displayForm(false)
-    if (isEdit) {
-        isEdit = false
-        titleForm.innerText = 'Add New Todo'
-        btnSubmitForm.innerText = 'Submit'
-        status.style.display = 'none'
-        clearFormTodoValue()
-    }
+    // if (isEdit) {
+    // isEdit = false
+    title.innerText = 'Add New Todo'
+    btnSubmitForm.innerText = 'Submit'
+    status1.style.display = 'none'
+    // }
 });
-
+(() => {
+    data = JSON.parse(localStorage.getItem("data")) || [];
+    createTasks()
+})();
