@@ -36,86 +36,6 @@
                             </div>
                         </div>
                         <div class="todos--item__folder" id="task">
-                            <!-- <div class="todos--item__component" >
-                                <div class="todos--component__header">
-                                    <a href="">Marketing</a>
-                                    <div class="todos--component__icon">
-                                    <i onclick="editTask()" class="fa-solid fa-pen"></i>
-                                    <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
-                                    </div>
-                                </div>
-                                <div class="todos--component__title">
-                                <b>
-                                    Write SEO article for new product
-                                </b>
-                                </div>
-                                <div class="todos--component__line"></div>
-                                <h6>This is an existential moment for effective altruism and the rationalist community writ-large.</p>
-                                <div class="todos--component__footer">
-                                    <i class="fa-solid fa-clock"></i>
-                                    <p>June 30,2022</p>
-                                </div>
-                            </div>
-                            <div class="todos--item__component" >
-                                <div class="todos--component__header">
-                                    <a href="">Marketing</a>
-                                    <div class="todos--component__icon">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
-                                    </div>
-                                </div>
-                                <div class="todos--component__title">
-                                <b>
-                                    Write SEO article for new product
-                                </b>
-                                </div>
-                                <div class="todos--component__line"></div>
-                                <h6>This is an existential moment for effective altruism and the rationalist community writ-large.</p>
-                                <div class="todos--component__footer">
-                                    <i class="fa-solid fa-clock"></i>
-                                    <p>June 30,2022</p>
-                                </div>
-                            </div>
-                            <div class="todos--item__component" >
-                                <div class="todos--component__header">
-                                    <a href="">Marketing</a>
-                                    <div class="todos--component__icon">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
-                                    </div>
-                                </div>
-                                <div class="todos--component__title">
-                                <b>
-                                    Write SEO article for new product
-                                </b>
-                                </div>
-                                <div class="todos--component__line"></div>
-                                <h6>This is an existential moment for effective altruism and the rationalist community writ-large.</p>
-                                <div class="todos--component__footer">
-                                    <i class="fa-solid fa-clock"></i>
-                                    <p>June 30,2022</p>
-                                </div>
-                            </div>
-                            <div class="todos--item__component" >
-                                <div class="todos--component__header">
-                                    <a href="">Marketing</a>
-                                    <div class="todos--component__icon">
-                                    <i class="fa-solid fa-pen"></i>
-                                    <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
-                                    </div>
-                                </div>
-                                <div class="todos--component__title">
-                                <b>
-                                    Write SEO article for new product
-                                </b>
-                                </div>
-                                <div class="todos--component__line"></div>
-                                <h6>This is an existential moment for effective altruism and the rationalist community writ-large.</p>
-                                <div class="todos--component__footer">
-                                    <i class="fa-solid fa-clock"></i>
-                                    <p>June 30,2022</p>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                     <div class="todos--item" id="doing">
@@ -125,6 +45,8 @@
                                 <div class="count">0</div>
                             </div>
                         </div>
+                        <div class="todos--item__folder" id="task2">
+                        </div>
                     </div>
                     <div class="todos--item" id="finished">
                         <div class="todos--info">
@@ -133,46 +55,8 @@
                                 <div class="count">0</div>
                             </div>
                         </div>
-                        <!-- <div class="todos--item__component">
-                            <div class="todos--component__header">
-                                <a href="">Marketing</a>
-                                <div class="todos--component__icon">
-                                <i class="fa-solid fa-pen"></i>
-                                <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
-                                </div>
-                            </div>
-                            <div class="todos--component__title">
-                            <b>
-                                Write SEO article for new product
-                            </b>
-                            </div>
-                            <div class="todos--component__line"></div>
-                            <h6>This is an existential moment for effective altruism and the rationalist community writ-large.</p>
-                            <div class="todos--component__footer">
-                                <i class="fa-solid fa-clock"></i>
-                                <p>June 30,2022</p>
-                            </div>
+                        <div class="todos--item__folder" id="task3">
                         </div>
-                        <div class="todos--item__component">
-                            <div class="todos--component__header">
-                                <a href="">Marketing</a>
-                                <div class="todos--component__icon">
-                                <i class="fa-solid fa-pen"></i>
-                                <i onClick ="deleteTask(this)" class="fa-solid fa-trash"></i>
-                                </div>
-                            </div>
-                            <div class="todos--component__title">
-                            <b>
-                                Write SEO article for new product
-                            </b>
-                            </div>
-                            <div class="todos--component__line"></div>
-                            <h6>This is an existential moment for effective altruism and the rationalist community writ-large.</p>
-                            <div class="todos--component__footer">
-                                <i class="fa-solid fa-clock"></i>
-                                <p>June 30,2022</p>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -213,7 +97,8 @@
                             type="radio"
                             id="Todo"
                             name="status"
-                            value="TODO_TYPE"
+                            value="TODO"
+                            checked
                         />
                          <label for="Todo">Todo</label><br />
                     </div>
@@ -222,7 +107,7 @@
                             type="radio"
                             id="Doing"
                             name="status"
-                            value="TODO_DOING_TYPE"
+                            value="DOING"
                         />
                          <label for="Doing">Doing</label><br />
                     </div>
@@ -231,7 +116,7 @@
                             type="radio"
                             id="Finished"
                             name="status"
-                            value="TODO_FINISHED_TYPE"
+                            value="FINISHED"
                         />
                          <label for="Finished">Finished</label><br />
                     </div>
